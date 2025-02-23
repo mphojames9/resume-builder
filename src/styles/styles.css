@@ -1,38 +1,32 @@
 body {
-    font-family: 'Roboto', sans-serif;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
     max-width: 900px;
     margin: 40px auto;
     padding: 20px;
-    background-color: #1a1a1a; /* Darker background */
-    color: #e0e0e0; /* Lighter text */
+    background-color: #f0f4f8; /* Light background */
+    color: #333;
     line-height: 1.7;
     box-sizing: border-box;
-    transition: background-color 0.3s ease, color 0.3s ease; /* Dark mode transition */
-}
-
-.body-light { /* Light mode class */
-    background-color: #f8f9fa;
-    color: #333;
+    transition: background-color 0.3s ease, color 0.3s ease;
 }
 
 .cv-builder {
-    background-color: #282828; /* Darker container */
+    background-color: #fff; /* White container */
     padding: 40px;
     border-radius: 12px;
-    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.5); /* Stronger shadow */
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.1); /* Subtle shadow */
     transition: box-shadow 0.3s ease, background-color 0.3s ease;
 }
 
 .cv-builder:hover {
-    box-shadow: 0 12px 30px rgba(0, 0, 0, 0.7);
+    box-shadow: 0 12px 30px rgba(0, 0, 0, 0.15);
 }
 
 h1, h2 {
-    color: #90caf9; /* Accent color */
+    color: #2c3e50; /* Darker heading color */
     margin-bottom: 25px;
     font-weight: 600;
     letter-spacing: 0.5px;
-    text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.8);
 }
 
 form {
@@ -41,51 +35,50 @@ form {
     gap: 20px;
     margin-bottom: 30px;
     padding: 30px;
-    background-color: #333333;
+    background-color: #e8f0fe; /* Light form background */
     border-radius: 8px;
-    border: 1px solid #444;
+    border: 1px solid #cce0f5;
     transition: background-color 0.3s ease, border 0.3s ease;
 }
 
 input, textarea {
     padding: 14px;
-    border: 1px solid #555;
+    border: 1px solid #d1d1d1;
     border-radius: 6px;
     font-size: 16px;
-    background-color: #404040;
-    color: #e0e0e0;
-    transition: border-color 0.3s ease, background-color 0.3s ease, color 0.3s ease;
+    background-color: #fff; /* White input background */
+    color: #333;
+    transition: border-color 0.3s ease, box-shadow 0.3s ease;
     outline: none;
     font-family: inherit;
 }
 
 input:focus, textarea:focus {
-    border-color: #64b5f6;
-    box-shadow: 0 0 5px rgba(100, 181, 246, 0.5);
-    background-color: #4a4a4a;
+    border-color: #4a90e2;
+    box-shadow: 0 0 5px rgba(74, 144, 226, 0.5);
 }
 
 button {
     padding: 14px 25px;
-    background-color: #64b5f6;
-    color: #1a1a1a;
+    background-color: #3498db; /* Blue button */
+    color: #fff;
     border: none;
     border-radius: 8px;
     cursor: pointer;
     font-size: 16px;
     font-weight: 500;
     transition: background-color 0.3s ease, transform 0.2s ease, box-shadow 0.3s ease;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.6);
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
 }
 
 button:hover {
-    background-color: #42a5f5;
+    background-color: #2980b9;
     transform: translateY(-3px);
-    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.8);
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2);
 }
 
 button:disabled {
-    background-color: #555;
+    background-color: #bdc3c7;
     cursor: not-allowed;
     box-shadow: none;
     transform: none;
@@ -96,9 +89,9 @@ button:disabled {
     grid-template-columns: 1fr;
     gap: 15px;
     padding: 20px;
-    background-color: #3a3a3a;
+    background-color: #e8f0fe; /* Light entry background */
     border-radius: 8px;
-    border: 1px solid #4a4a4a;
+    border: 1px solid #cce0f5;
     transition: background-color 0.3s ease, border 0.3s ease;
 }
 
@@ -109,45 +102,43 @@ button:disabled {
 }
 
 .info-display {
-    background-color: #333;
+    background-color: #ecf0f1; /* Very light info display */
     padding: 30px;
     border-radius: 8px;
     margin-bottom: 30px;
-    border: 1px solid #444;
-    box-shadow: inset 0 2px 4px rgba(0, 0, 0, 0.3);
+    border: 1px solid #d8d8d8;
+    box-shadow: inset 0 2px 4px rgba(0, 0, 0, 0.05);
     transition: background-color 0.3s ease, border 0.3s ease, box-shadow 0.3s ease;
 }
 
 .cv-preview {
-    background-color: #282828;
+    background-color: #fff; /* White preview background */
     padding: 40px;
     border-radius: 12px;
-    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.5);
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.1);
     line-height: 1.8;
     font-size: 16px;
     transition: box-shadow 0.3s ease, background-color 0.3s ease;
 }
 
 .preview-content h1 {
-    border-bottom: 3px solid #64b5f6;
+    border-bottom: 3px solid #34495e;
     padding-bottom: 15px;
     margin-bottom: 30px;
     font-size: 2.5em;
-    color: #90caf9;
-    text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.8);
+    color: #34495e;
 }
 
 .preview-content h2 {
     margin-top: 30px;
-    color: #64b5f6;
+    color: #34495e;
     font-size: 1.8em;
     font-weight: 600;
-    text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.8);
 }
 
 .preview-content p {
     margin-bottom: 15px;
-    color: #ccc;
+    color: #555;
     transition: color 0.3s ease;
 }
 
@@ -159,11 +150,10 @@ button:disabled {
 
 .preview-content li {
     margin-bottom: 8px;
-    color: #ccc;
+    color: #555;
     transition: color 0.3s ease;
 }
 
-/* Animations */
 @keyframes fadeIn {
     from { opacity: 0; transform: translateY(-10px); }
     to { opacity: 1; transform: translateY(0); }
@@ -173,7 +163,6 @@ button:disabled {
     animation: fadeIn 0.5s ease-out;
 }
 
-/* Responsive adjustments */
 @media (max-width: 768px) {
     body {
         padding: 10px;
