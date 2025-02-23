@@ -1,5 +1,8 @@
 # Resume Builder
 
+![Home Page](src/assets/logo/image.jpg)
+![Home Page](src/assets/logo/image2.jpg)
+
 This project is a React-based resume builder that allows users to create and download their resumes in PDF format. It features a user-friendly interface with forms for entering personal information, education, and work experience.
 
 ## Features
