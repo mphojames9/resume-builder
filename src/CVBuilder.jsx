@@ -3,7 +3,8 @@ import GeneralInfoForm from "./components/GeneralInfoForm";
 import EducationForm from "./components/EducationForm";
 import WorkExperienceForm from "./components/WorkExperienceForm";
 import CVPreview from "./components/CVPreview";
-import { generatePDF } from "./utils/pdfGenerator"; // Import the pdfGenerator
+import { generatePDF } from "./utils/pdfGenerator";
+import logo from './assets/logo/mylogo.png'
 
 function CVBuilder() {
   const [generalInfo, setGeneralInfo] = useState({});
@@ -18,17 +19,17 @@ function CVBuilder() {
 
   const handleGeneralSubmit = (data) => {
     setGeneralInfo(data);
-    setIsEditing({ ...isEditing, general: false });
+    setIsEditing((prev) => ({ ...prev, general: false }));
   };
 
   const handleEducationSubmit = (data) => {
     setEducation(data);
-    setIsEditing({ ...isEditing, education: false });
+    setIsEditing((prev) => ({ ...prev, education: false }));
   };
 
   const handleWorkSubmit = (data) => {
     setWorkExperience(data);
-    setIsEditing({ ...isEditing, work: false });
+    setIsEditing((prev) => ({ ...prev, work: false }));
   };
 
   const togglePreviewMode = () => {
@@ -36,7 +37,7 @@ function CVBuilder() {
   };
 
   const handleEdit = (section) => {
-    setIsEditing({ ...isEditing, [section]: true });
+    setIsEditing((prev) => ({ ...prev, [section]: true }));
   };
 
   const generatePDFWrapper = () => {
@@ -57,7 +58,10 @@ function CVBuilder() {
 
   return (
     <div className="cv-builder">
-      <h1>Resume Builder</h1>
+      <div className="header-container">
+        <img src={logo} alt="Your Logo" className="logo" />
+        <h1>Resume Builder</h1>
+      </div>
       <button
         onClick={togglePreviewMode}
         disabled={!generalInfo || !education.length || !workExperience.length}
